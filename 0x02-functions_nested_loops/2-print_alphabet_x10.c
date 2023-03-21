@@ -5,7 +5,7 @@
  * function to print alphabet 10 times whitout any return_
 */
 
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
 	char ch;
 	int i=0;
