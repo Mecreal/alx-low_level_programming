@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_alphabet - see bellow 
+ * print_alphabet - see bellow
  * function to print alphabet whitout any return_
 */
 
