@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * print_alphabets - see bellow 
+ * print_alphabet - see bellow 
  * function to print alphabet whitout any return_
 */
 
-void print_alphabets(void)
+void print_alphabet(void)
 {
 	char ch;
 
