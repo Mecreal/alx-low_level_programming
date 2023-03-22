@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- *_abs -calculate the absolut value
- * @c: a number to be checked
+ * _add -calculate the additions value
+ * @a: a number to be checked
+ * @b: seconde number
  * Return: 1 - if lowercase 0 id otherwise
 */
 
