@@ -7,7 +7,7 @@
 */
 
 
-void reset_to_98(int *n, int *p)
+void swap(int *n, int *p)
 {
 	int m;
 
