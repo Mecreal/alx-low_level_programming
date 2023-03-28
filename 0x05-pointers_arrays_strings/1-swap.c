@@ -7,7 +7,7 @@
 */
 
 
-void swap(int *n, int *p)
+void swap_int(int *n, int *p)
 {
 	int m;
 
