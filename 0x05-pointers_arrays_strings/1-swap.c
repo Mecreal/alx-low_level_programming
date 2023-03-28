@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* reset_to_98 - tests function that prints if integer is positive or negative
+* swap_int - tests function that prints if integer is positive or negative
 * @n : point to the variable needed
 * @p : second pointer
 */
