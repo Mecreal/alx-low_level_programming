@@ -1,12 +1,27 @@
 #include "main.h"
 
 /**
-* reset_to_98 - tests function that prints if integer is positive or negative
-* @n : point to the variable needed
+* _strcat - appending two strings
+* @dest : the first string
+* @src : string to be add to dest
+* Return: A pointer
 */
 
 
-void reset_to_98(int *n)
+char *_strcat(char *dest, char *src)
 {
-	*n = 98;
+	int l_dest = 0, l_src = 0;
+
+	while (*(dest + l_dest) != '\0')
+		l_dest++;
+
+	while (*(src + l_src) != '\0')
+	{
+		*(dest + l_dest) = *(src + l_src);
+		l_dest++;
+		l_src++;
+
+	}
+	*(dest + l_dest) = '\0';
+	return (dest);
 }
