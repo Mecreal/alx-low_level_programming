@@ -18,7 +18,8 @@ char *rot13(char *s)
 		j = 0;
 		while (a_13[j] != 0)
 		{
-			if (a_d[j] == s[i]){
+			if (a_d[j] == s[i])
+			{
 				s[i] = a_13[j];
 				break;
 			}
