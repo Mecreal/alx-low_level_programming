@@ -1,25 +1,27 @@
 #include "main.h"
 
 /**
-* leet - changing 1337.
+* rot13 - ROT-13 crypting.
 * @s: the string
 * Return: the string in uppercase
 */
 
-char *leet(char *s)
+char *rot13(char *s)
 {
 	int i = 0, j = 0;
-	char let[] = {'a', 'e', 'o', 't', 'l'};
-	char numb[] = {'4', '3', '0', '7', '1'};
+	char a_d[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char a_13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 
 	while (s[i] != 0)
 	{
 		j = 0;
-		while (j < 5)
+		while (a_13[j] != 0)
 		{
-			if ((s[i] == let[j]) || (s[i] == (let[j] - 32)))
-				s[i] = numb[j];
+			if (a_d[j] == s[i]){
+				s[i] = a_13[j];
+				break;
+			}
 			j++;
 		}
 		i++;
