@@ -13,13 +13,16 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int l_src = 0;
 
-	while (*(src + l_src) != '\0' && l_src < n)
+	while (src[l_src] != '\0' && l_src < n)
 	{
-		*(dest + l_src) = *(src + l_src);
+		src[l_src] = src[l_src];
 		l_src++;
 
 	}
 	while (l_src < n)
+	{
 		*(dest + l_src) = '\0';
+		l_src++;
+	}
 	return (dest);
 }
