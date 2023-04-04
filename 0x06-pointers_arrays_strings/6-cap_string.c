@@ -19,8 +19,8 @@ char *cap_string(char *s)
 		j = 0;
 		while (j <= size / 2)
 		{
-			if ((s[i - 1] == seps[j]))
-				s[i] = ((s[i] >= 'a' && s[i] <= 'z') ? s[i] - 32 : s[i]);	
+			if (s[i - 1] == seps[j])
+				s[i] = ((s[i] >= 'a' && s[i] <= 'z') ? s[i] - 32 : s[i]);
 			j++;
 		}
 		i++;
