@@ -27,5 +27,4 @@ void print_number(int n)
 		_putchar('0' + mod);
 		div /= 10;
 	}
-	_putchar('\n');
 }
