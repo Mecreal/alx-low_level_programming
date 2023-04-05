@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* _memcpy - function copies n bytes from memory area src to memory area dest
+* _strspn - function copies n bytes from memory area src to memory area dest
 * @accept : consist only of bytes
 * @s : string to be add to dest
 * Return:  the number of bytes in the initial segment of s which consist
