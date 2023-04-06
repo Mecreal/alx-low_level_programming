@@ -2,8 +2,8 @@
 
 /**
 * factorial - recursion function for the factorial
-* @s : the string to be printed
-* Return: the number 
+* @n : the number to calculat the factorial
+* Return: the number
 */
 
 int factorial(int n)
