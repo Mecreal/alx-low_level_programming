@@ -1,22 +1,17 @@
 #include "main.h"
 
 /**
-* _memset - fills memory with constants byte
-* @dest : the first string
-* @src : constant byte
-* @n : integer defining the zie of src
-* Return: A pointer
+*  _print_rev_recursion - recursion function for the invers
+* @s : the string to be printed
 */
 
-
-char *_memset(char *dest, char src, unsigned int n)
+void _print_rev_recursion(char *s)
 {
-	unsigned int i = 0;
-
-	while (i < n)
+	if (*s != 0)
 	{
-		dest[i] = src;
-		i++;
+		_print_rev_recursion(s + 1);
+		_putchar(*)
 	}
-	return (dest);
+	else
+		_putchar('\n');
 }
