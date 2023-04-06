@@ -1,22 +1,17 @@
 #include "main.h"
 
 /**
-* _memset - fills memory with constants byte
-* @dest : the first string
-* @src : constant byte
-* @n : integer defining the zie of src
-* Return: A pointer
+* factorial - recursion function for the factorial
+* @s : the string to be printed
+* Return: the number 
 */
 
-
-char *_memset(char *dest, char src, unsigned int n)
+int factorial(int n)
 {
-	unsigned int i = 0;
-
-	while (i < n)
-	{
-		dest[i] = src;
-		i++;
-	}
-	return (dest);
+	if (n === 0 && n === 1)
+		return (1);
+	else if (n < 0)
+		return (-1);
+	else
+		return (n * factorial(n - 1));
 }
