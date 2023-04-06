@@ -1,22 +1,15 @@
 #include "main.h"
 
 /**
-* _memset - fills memory with constants byte
-* @dest : the first string
-* @src : constant byte
-* @n : integer defining the zie of src
-* Return: A pointer
+* _strlen_recursion - recursion function for the numb of str
+* @s : the string to be printed
+* Return: the number of str
 */
 
-
-char *_memset(char *dest, char src, unsigned int n)
+int _strlen_recursion(char *s)
 {
-	unsigned int i = 0;
-
-	while (i < n)
+	if (*s != 0)
 	{
-		dest[i] = src;
-		i++;
+		return (_strlen_recursion(s + 1) + 1);
 	}
-	return (dest);
 }
