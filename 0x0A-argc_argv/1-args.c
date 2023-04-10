@@ -9,8 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-	char *mute = *argv;
-
-	printf("%d\n", argc);
+	argv = argv;
+	printf("%d\n", argc - 1);
 	return (0);
 }
