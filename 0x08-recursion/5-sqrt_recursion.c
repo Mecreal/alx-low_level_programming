@@ -1,22 +1,18 @@
 #include "main.h"
 
 /**
-* _memset - fills memory with constants byte
-* @dest : the first string
-* @src : constant byte
-* @n : integer defining the zie of src
-* Return: A pointer
+* _pow_recursion - recursion function for the power
+* @x : the number
+* @y : the power
+* Return: the number
 */
 
-
-char *_memset(char *dest, char src, unsigned int n)
+int _pow_recursion(int x, int y)
 {
-	unsigned int i = 0;
-
-	while (i < n)
-	{
-		dest[i] = src;
-		i++;
-	}
-	return (dest);
+	if (y == 0)
+		return (1);
+	else if (y < 0)
+		return (-1);
+	else
+		return (x * _pow_recursion(x, y - 1));
 }
