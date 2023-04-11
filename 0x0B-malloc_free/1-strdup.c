@@ -1,21 +1,31 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
- * create_array- creating an array object
- * @size: the size of the variable
- * @c: the character
- * Return: char* or a NULL
+ * _strdup- creating an array object
+ * @str: the string
+ * Return: a pointer to a newly allocated space in memory,
+ * which contains a copy of the string given as a parameter.
  */
 
-char *create_array(unsigned int size, char c)
+char *_strdup(char *str)
 {
-	int *arr;
+	char *dup;
+	int unsigned i = 0;
 
-	arr = malloc(sizeof(c) * size);
-	if (arr != NULL)
+	if (str == NULL)
+		return (NULL);
+
+	dup = malloc(sizeof(*str));
+	if (dup != NULL)
 	{
-		return (arr);
+		while (*(str + i) != '\0')
+		{
+			*(dup + i ) = *(str + i );
+			i++;
+		}
+		return (dup);
 	}
 	return (NULL);
 }
