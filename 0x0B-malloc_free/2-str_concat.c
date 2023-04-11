@@ -18,23 +18,20 @@ char *str_concat(char *s1, char *s2)
 	{
 		l1 = 0;
 		s1 = "";
-	} else 
+	} else
 	{
 		while (*(s1 + l1) != '\0')
 			l1++;
 	}
-
 	if (s2 == NULL)
 	{
 		l2 = 0;
 		s2 = "";
-	} else 
+	} else
 	{
 		while (*(s2 + l2) != '\0')
 			l2++;
 	}
-
-
 	lt = l1 + l2;
 	concat = malloc(sizeof(char) * (lt + 1));
 	if (concat != NULL)
@@ -51,7 +48,6 @@ char *str_concat(char *s1, char *s2)
 			i++;
 		}
 		*(concat + lt + 1) = '\0';
-
 		return (concat);
 	}
 	return (NULL);
