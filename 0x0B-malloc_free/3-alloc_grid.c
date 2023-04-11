@@ -4,31 +4,40 @@
 
 /**
  * alloc_grid- returns a pointer to a 2 dimensional array of integers.
- * @str: the string
+ * @width: the width of the matrix
+ * @height: The hight of the matrix
  * Return:  a pointer to a 2 dimensional array of integers.
  */
 
 int **alloc_grid(int width, int height)
 {
-	char *dup;
-	int len = 0 ,i = 0;
+	int **matrix;
+	int x = 0, y = 0;
 
-
-	if (str == NULL)
+	if (height <= 0 || width <= 0)
 		return (NULL);
 
-	while (*(str + len) != '\0')
-		len++;
-
-	dup = malloc(sizeof(char) * (len + 1));
-	if (dup != NULL)
+	matrix = (int **)malloc(height * sizeof(int *));
+	if (matrix != NULL)
 	{
-		while (*(str + i) != '\0')
+		while (x < height)
 		{
-			*(dup + i) = *(str + i);
-			i++;
+			matrix[x] = (int *)malloc(sizeof(int) * width);
+            if (matrix[x] == NULL)
+			{
+				for (y = 0; y < x; y++)
+                	free(matrix[y]);
+            	free(matrix);
+            	return NULL;
+			}
+			while (y < width)
+			{
+				matrix[x][y] = 0;
+				y++;
+			}
+			x++;
 		}
-		return (dup);
+		return (matrix);
 	}
 	return (NULL);
 }
