@@ -3,33 +3,47 @@
 #include <stdlib.h>
 
 /**
- * _strdup- creating an array object
- * @str: the string
- * Return: a pointer to a newly allocated space in memory,
- * which contains a copy of the string given as a parameter.
+ * str_concat- returns a pointer to a 2 dimensional array of integers.
+ * @s1: the string
+ * @s2: the string 2
+ * Return:  a pointer to a 2 dimensional array of integers.
  */
 
-char *_strdup(char *str)
+char *str_concat(char *s1, char *s2)
 {
-	char *dup;
-	int len = 0 ,i = 0;
+	char *concat;
+	int l1 = 0,  l2 = 0, lt = 0,i = 0;
 
-
-	if (str == NULL)
-		return (NULL);
-
-	while (*(str + len) != '\0')
-		len++;
-
-	dup = malloc(sizeof(char) * (len + 1));
-	if (dup != NULL)
+	if (s1 == NULL)
+		l1 = 0;
+	else if (s2 == NULL)
+		l2 = 0;
+	else
 	{
-		while (*(str + i) != '\0')
+		while (*(s1 + l1) != '\0')
+			l1++;
+		while (*(s2 + l2) != '\0')
+			l2++;
+		lt = l1 + l2;
+	}
+
+	concat = malloc(sizeof(char) * (lt + 3));
+	if (concat != NULL)
+	{
+		while (*(s1 + i) != '\0')
 		{
-			*(dup + i) = *(str + i);
+			*(concat + i) = *(s1 + i);
 			i++;
 		}
-		return (dup);
+		i = 0;
+		while (*(s2 + i) != '\0')
+		{
+			*(concat + l1 + i) = *(s2 + i);
+			i++;
+		}
+		*(concat + lt + 1) = '\0';
+
+		return (concat);
 	}
 	return (NULL);
 }
