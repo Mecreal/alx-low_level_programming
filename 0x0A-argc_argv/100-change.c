@@ -19,7 +19,6 @@ int main(int argc, char *argv[])
 		printf("0\n");
 	else
 	{
-	
 	}
 	return (0);
 }
