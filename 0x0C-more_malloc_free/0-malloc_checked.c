@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * malloc_checked - creating an array object
+ * malloc_checked - function that allocates memory using malloc
  * @b: the size of the the space allocated
  * Return: char* or a NULL
  */
