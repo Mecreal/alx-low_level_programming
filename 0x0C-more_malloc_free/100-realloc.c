@@ -3,19 +3,53 @@
 #include <stdlib.h>
 
 /**
- * malloc_checked - function that allocates memory using malloc
- * @b: the size of the the space allocated
+ * _realloc - function that allocates memory using malloc
+ * @ptr: void
+ * @old_size: void
+ * @new_size: void
  * Return: char* or a NULL
  */
 
-void *malloc_checked(unsigned int b)
-{
-	char *mal_check;
 
-	mal_check = malloc(b);
-	if (mal_check == NULL)
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+{
+	void *mem;
+	char *ptr_copy, *filler;
+	unsigned int index;
+
+	if (new_size == old_size)
+		return (ptr);
+
+	if (ptr == NULL)
 	{
-		exit(98);
+		mem = malloc(new_size);
+
+		if (mem == NULL)
+			return (NULL);
+
+		return (mem);
 	}
-	return (mal_check);
+
+	if (new_size == 0 && ptr != NULL)
+	{
+		free(ptr);
+		return (NULL);
+	}
+
+	ptr_copy = ptr;
+	mem = malloc(sizeof(*ptr_copy) * new_size);
+
+	if (mem == NULL)
+	{
+		free(ptr);
+		return (NULL);
+	}
+
+	filler = mem;
+
+	for (index = 0; index < old_size && index < new_size; index++)
+		filler[index] = *ptr_copy++;
+
+	free(ptr);
+	return (mem);
 }
