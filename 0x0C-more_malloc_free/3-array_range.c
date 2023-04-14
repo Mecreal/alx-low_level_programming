@@ -3,19 +3,30 @@
 #include <stdlib.h>
 
 /**
- * malloc_checked - function that allocates memory using malloc
- * @b: the size of the the space allocated
- * Return: char* or a NULL
+ * array_range - function that allocates memory using malloc
+ * @min: the size of the the space allocated
+ * @max: the size of the the space allocated
+ * Return: integer value
  */
 
-void *malloc_checked(unsigned int b)
+int *array_range(int min, int max)
 {
-	char *mal_check;
+	int *a, i = 0;
 
-	mal_check = malloc(b);
-	if (mal_check == NULL)
+	if (min > max)
+		return (NULL);
+
+	a = malloc((sizeof(int) * (max - min)) + sizeof(int));
+
+	if (a == NULL)
+		return (NULL);
+
+	while (min <= max)
 	{
-		exit(98);
+		a[i] = min;
+		i++;
+		min++;
 	}
-	return (mal_check);
+
+	return (a);
 }
