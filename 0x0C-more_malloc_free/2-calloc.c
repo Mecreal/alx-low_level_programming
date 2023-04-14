@@ -3,19 +3,31 @@
 #include <stdlib.h>
 
 /**
- * malloc_checked - function that allocates memory using malloc
- * @b: the size of the the space allocated
+ * _calloc - function that allocates memory for an array, using malloc
+ * @nmemb: number of elements
+ * @size: size
  * Return: char* or a NULL
  */
 
-void *malloc_checked(unsigned int b)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *mal_check;
+	int i = 0, l = 0;
+	char *p;
 
-	mal_check = malloc(b);
-	if (mal_check == NULL)
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+
+	l = nmemb * size;
+	p = malloc(l);
+
+	if (p == NULL)
+		return (NULL);
+
+	while (i < l)
 	{
-		exit(98);
+		p[i] = 0;
+		i++;
 	}
-	return (mal_check);
+
+	return (p);
 }
