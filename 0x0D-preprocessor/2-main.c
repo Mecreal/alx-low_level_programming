@@ -1,16 +1,12 @@
 #include <stdio.h>
 
-#ifndef __FILE__
-#define __FILE__
-
-#endif
 /**
- * main - check the code
+ * main - code that print this file name
  *
  * Return: Always 0.
  */
 int main(void)
 {
-    printf("%s\n",__FILE__);
-    return (0);
+	printf("%s\n", __BASE_FILE__);
+	return (0);
 }
