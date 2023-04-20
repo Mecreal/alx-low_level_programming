@@ -15,5 +15,4 @@ void print_name(char *name, void (*name_fun)(char *))
 		return;
 	}
     name_fun(name);
-
 }
