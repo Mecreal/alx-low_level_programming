@@ -25,19 +25,18 @@ Repo:
 *    File: dog.h
 
 
-### 1. If you spend too much time thinking about a thing, you'll never get it done 
+### 1. A dog is the only thing on earth that loves you more than you love yourself 
 
-Write a function that executes a function given as a parameter on each element of an array.
+Write a function that initialize a variable of type struct dog
 
-* Prototype: void array_iterator(int *array, size_t size, void (*action)(int));
-* where size is the size of the array
-* and action is a pointer to the function you need to use
+*    Prototype: void init_dog(struct dog *d, char *name, float age, char *owner);
+
 
 Repo:
 
 *    GitHub repository: alx-low_level_programming
 *    Directory: 0x0F-function_pointers
-*    File: 1-array_iterator.c
+*    File: 1-init_dog.c
 
 ### 2. To hell with circumstances; I create opportunities 
 
