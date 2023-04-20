@@ -12,8 +12,8 @@ void print_name(char *name, void (*name_fun)(char *))
 {
 	if (name == NULL || name_fun == NULL)
 	{
-		exit(98);
+		return;
 	}
-    (*name_fun)(name);
+    name_fun(name);
 
 }
