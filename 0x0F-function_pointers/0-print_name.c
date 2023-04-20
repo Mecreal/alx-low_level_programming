@@ -1,4 +1,5 @@
 #include "function_pointers.h"
+
 /**
  * print_name - function that return another function
  * @name: the argument to be sent to name_fun
@@ -11,5 +12,5 @@ void print_name(char *name, void (*name_fun)(char *))
 	{
 		return;
 	}
-    name_fun(name);
+	name_fun(name);
 }
