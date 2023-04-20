@@ -1,14 +1,21 @@
-#include "3-calc.h"
+#include "dog.h"
 
 /**
- * get_op_func - function of sum
- * @s: the operator
+ * init_dog - function of sum
+ * @d: dog's structure
+ * @name: initialisation of name
+ * @age: initialisation of age
+ * @owner: initialisation of owner
  * Return: the operator function
  */
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-    d.name = name;
-    d.age = age;
-    d.owner = owner;
+    if (d != NULL)
+    {
+        (*d).name = name;
+        (*d).age = age;
+        (*d).owner = owner;
+    }
+    exit(-1);
 }
