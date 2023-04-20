@@ -1,7 +1,4 @@
-#include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-
+#include "function_pointers.h"
 /**
  * print_name - function that return another function
  * @name: the argument to be sent to name_fun
