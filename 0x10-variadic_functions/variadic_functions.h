@@ -1,6 +1,7 @@
 #ifndef VARIAD
 #define VARIAD
 #include <stdarg.h>
+#include <stdlib.h>
 #include <stdio.h>
 
 
