@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <string.h>
 
 /**
  * add_node -function that add new node.
@@ -22,21 +23,13 @@ list_t *add_node(list_t **head, const char *str)
 		free(new);
 		return (NULL);
 	}
-	while (cursor != NULL)
-	{
-		if (cursor->str != NULL)
-			printf("[%d] %s\n", cursor->len, cursor->str);
-		else
-			printf("[0] (nil)\n");
-		i++;
-		cursor = cursor->next;
-	}
 	while (str[lent])
 		lent++;
 
 	new->str = st;
-	new->lent = lent;
+	new->len = lent;
 	new->next = *head;
 
-return (i);
+	*head = new;
+return (new);
 }
