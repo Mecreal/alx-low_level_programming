@@ -1,3 +1,4 @@
+#include "variadic_functions.h"
 #include <stdarg.h>
 
 /**
@@ -12,7 +13,6 @@ void print_all(const char * const format, ...)
 	int i = 0;
 	char *s;
 	char c;
-	float f;
 
 	va_start(ap, format);
 
