@@ -8,7 +8,7 @@
  * struct list_s - Struct list of string
  * @str: a string
  * @len: Length
- * @age: float
+ * @next: float
  */
 typedef struct list_s
 {
