@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- * main - assigns a random number to int n every time
- * it executes, and prints it
- * Return: Always 0 (Success)
+ * print_list -function that prints all the elements of a list_t list.
+ * @h: the string
+ * Return: Always i (Success)
 */
 
 size_t print_list(const list_t *h)
