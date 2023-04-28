@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_list -function that returns the number of elements in a linked list.
+ * list_len -function that returns the number of elements in a linked list.
  * @h: the string
  * Return: Always i (Success)
 */
