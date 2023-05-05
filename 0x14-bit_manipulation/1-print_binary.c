@@ -1,7 +1,7 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * print_binary - prints the binary
+ * print_binary - binary form
  * @n : unsigned int
  */
 void print_binary(unsigned long int n)
