@@ -2,7 +2,7 @@
 
 
 /**
- * read_textfile - reads a text file and prints it 
+ * read_textfile - reads a text file and prints it
  * to the POSIX standard output.
  * @letters:  number of letters it should read and print
  * @filename: The name of the file
@@ -35,7 +35,6 @@ ssize_t read_textfile(const char *filename, size_t letters);
 	words = write(STDOUT_FILENO, content, let);
 
 	close(file);
-	
-	
+
 	return (words);
 }
