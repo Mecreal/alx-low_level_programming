@@ -10,20 +10,20 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	if (filename == NULL)
-		return (0);
-
 	ssize_t file;
 	ssize_t let;
 	ssize_t words;
 	char *content;
 
-	content = malloc(sizeof(char) * content);
+	if (filename == NULL)
+		return (0);
+
+	content = malloc(sizeof(char) * letters);
 
 	if (content == NULL)
 		return (0);
 
-	file = open(filename(content, O_RDONLY));
+	file = open(filename, O_RDONLY);
 
 	if (file == -1)
 	{
@@ -31,7 +31,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	letters = read(file, content, letters);
+	let = read(file, content, letters);
 	words = write(STDOUT_FILENO, content, let);
 
 	close(file);
