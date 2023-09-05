@@ -8,7 +8,7 @@
  * @filename: The name of the file
  * Return:number of letters int else 0
  */
-ssize_t read_textfile(const char *filename, size_t letters);
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 	if (filename == NULL)
 		return (0);
