@@ -2,12 +2,12 @@
 
 
 /**
- * create_file -  function that appends text at the end of a file.
+ * append_text_to_file -  function that appends text at the end of a file.
  * @filename:  the name of the file to create
  * @text_content: is a NULL terminated string to write to the file
  * Return: success 1 faillure -1
  */
-int int append_text_to_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int num_char = 0;
 	int file;
