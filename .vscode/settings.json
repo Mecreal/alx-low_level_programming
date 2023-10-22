@@ -3,6 +3,8 @@
     "files.associations": {
         "*.mod": "wolfram",
         "*.ma": "wolfram",
-        "typeinfo": "c"
+        "typeinfo": "c",
+        "main.h": "c",
+        "stdlib.h": "c"
     }
 }
