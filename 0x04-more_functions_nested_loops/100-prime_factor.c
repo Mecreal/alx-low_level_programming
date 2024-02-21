@@ -32,6 +32,6 @@ int main(void)
 		}
 	}
 
-	printf("%ld \n", temp);
+	printf("%ld\n", temp);
 	return (0);
 }
