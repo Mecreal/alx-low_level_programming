@@ -27,7 +27,6 @@ int main(void)
 	{
 		while (a % i == 0)
 		{
-			printf("%ld \n", temp);
 			temp = i;
 			a = a / i;
 		}
